@@ -9,6 +9,7 @@ int f1(int i){
 		return f1(i-1) + f1(i-2);
 }
 
+// loop method
 int f2(int i){
 	int a=1;
 	int b=1;
@@ -24,13 +25,14 @@ int f2(int i){
 	return c;
 }
 
-int f3(int i, int b=1, int a=1){
+// tail recursion
+int f3(int i, int val=1, int prev=1){
 	if(i==1)
-		return a;	
+		return prev;	
 	if(i==2)
-		return b;
+		return val;
 	else
-		return f3(i-1, b+a, b);
+		return f3(i-1, val+prev, val);
 }
 
 int main(){
