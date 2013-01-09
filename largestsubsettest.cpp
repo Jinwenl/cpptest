@@ -1,11 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
 int f(const vector<int> &v){
 	int sum = 0;
-	int max = 0;
+	int max = -RAND_MAX;	// incase the max is negative
+	cout << max << endl;
 	for(int i = 0; i < v.size(); i++){
 		sum += v[i];
 		
